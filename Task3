@@ -5,6 +5,7 @@
     "colab": {
       "name": "Untitled1.ipynb",
       "provenance": [],
+      "collapsed_sections": [],
       "include_colab_link": true
     },
     "kernelspec": {
@@ -30,20 +31,20 @@
         "colab_type": "code",
         "colab": {
           "base_uri": "https://localhost:8080/",
-          "height": 34
+          "height": 54
         },
-        "outputId": "07f50502-a1bd-4607-872e-bd2480f8f699"
+        "outputId": "7a2f5d22-3500-4a3a-c89a-a0e05543424f"
       },
       "source": [
-        "text1 = ['To Sherlock Holmes she is always the woman.','I have seldom heard him mention her under any other name.']\n",
-        "print(text1[1])"
+        "text1 = {1: 'To Sherlock Holmes she is always the woman.', 2:'I have seldom heard him mention her under any other name.'}\n",
+        "print(text1)\n"
       ],
-      "execution_count": 10,
+      "execution_count": 39,
       "outputs": [
         {
           "output_type": "stream",
           "text": [
-            "I have seldom heard him mention her under any other name.\n"
+            "{1: 'To Sherlock Holmes she is always the woman.', 2: 'I have seldom heard him mention her under any other name.'}\n"
           ],
           "name": "stdout"
         }
@@ -60,7 +61,8 @@
         "\n",
         "\n",
         "1.   Use lower() and split() functions in order to insert the words into list and separate\n",
-        "2.   Input: text1 (string)\n",
+        "2.   Input: text1 (dictionary of strings)\n",
+        "\n",
         "\n",
         "\n"
       ]
