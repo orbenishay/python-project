@@ -31,20 +31,22 @@
         "colab_type": "code",
         "colab": {
           "base_uri": "https://localhost:8080/",
-          "height": 54
+          "height": 51
         },
-        "outputId": "7a2f5d22-3500-4a3a-c89a-a0e05543424f"
+        "outputId": "6b475873-59af-43bd-a8db-8d329be18fed"
       },
       "source": [
         "text1 = {1: 'To Sherlock Holmes she is always the woman.', 2:'I have seldom heard him mention her under any other name.'}\n",
-        "print(text1)\n"
+        "for row in text1:\n",
+        "  print(text1[row])\n"
       ],
-      "execution_count": 39,
+      "execution_count": 56,
       "outputs": [
         {
           "output_type": "stream",
           "text": [
-            "{1: 'To Sherlock Holmes she is always the woman.', 2: 'I have seldom heard him mention her under any other name.'}\n"
+            "To Sherlock Holmes she is always the woman.\n",
+            "I have seldom heard him mention her under any other name.\n"
           ],
           "name": "stdout"
         }
