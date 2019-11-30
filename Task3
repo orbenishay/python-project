@@ -29,7 +29,11 @@
       "metadata": {
         "id": "FnsQ2qaMIONH",
         "colab_type": "code",
-        "colab": {}
+        "outputId": "763e1230-97c3-498e-c006-ff05f9c5a01f",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 54
+        }
       },
       "source": [
         "import re\n",
@@ -40,8 +44,20 @@
         "\n",
         "  for row_num, sentence in enumerate(text): #enumerate(text) creates a list of tuples of the form [(1, <string in row1>),(2, <string in row2>)]\n",
         "     words_list = sentence.split()\n",
-        "     \n",
+        "     for word_num, word in enumerate(words_list):\n",
+        "       if len(word)<=2\n",
+        "\n",
+        "       dispo = True\n",
+        "       word_and_dispo = (word, dispo)\n",
+        "       word_dict[(row_num, word_num)] = word_and_dispo\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
         "  return word_dict\n",
+        "\n",
+        "text2=rowparser(text1)\n",
+        "print(text2)\n",
         "\n",
         "\n",
         "    # loop over words\n",
@@ -55,8 +71,16 @@
         "  # print(match)\n",
         "  \n"
       ],
-      "execution_count": 0,
-      "outputs": []
+      "execution_count": 24,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "{(0, 0): ('To', 'Ignore'), (0, 1): ('Sherlock1', 'Ignore'), (0, 2): ('Holmes', 'Ignore'), (0, 3): ('she', 'Ignore'), (0, 4): ('is', 'Ignore'), (0, 5): ('always', 'Ignore'), (0, 6): ('the', 'Ignore'), (0, 7): ('woman.', 'Ignore'), (1, 0): ('I', 'Ignore'), (1, 1): ('have', 'Ignore'), (1, 2): ('seldom', 'Ignore'), (1, 3): ('heard', 'Ignore'), (1, 4): ('him', 'Ignore'), (1, 5): ('mention', 'Ignore'), (1, 6): ('her', 'Ignore'), (1, 7): ('under', 'Ignore'), (1, 8): ('any', 'Ignore'), (1, 9): ('other', 'Ignore'), (1, 10): ('name.', 'Ignore')}\n"
+          ],
+          "name": "stdout"
+        }
+      ]
     },
     {
       "cell_type": "markdown",
