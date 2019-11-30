@@ -29,7 +29,7 @@
       "metadata": {
         "id": "FnsQ2qaMIONH",
         "colab_type": "code",
-        "outputId": "893564c1-b76c-4b24-e8d3-0c85e30b9775",
+        "outputId": "0ac77fb9-9559-4080-d632-4af260292ca3",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 54
@@ -46,12 +46,15 @@
         "     words_list = sentence.split()\n",
         "     for word_num, word in enumerate(words_list):\n",
         "       dispo = True\n",
-        "       match_number = re.search('^[A-Za-z]+$', word)\n",
+        "       match_word = re.search('^[a-z]+$', word)\n",
+        "       match_cap = re.match('[A-Z]', word)\n",
         "       \n",
-        "       if len(word)<=2:\n",
+        "       if len(word)<=2: # can usae 'or' here for better performance\n",
         "         dispo = False\n",
-        "       elif bool(match_number)==True:\n",
+        "       elif bool(match_word)==False:\n",
         "         dispo = False\n",
+        "       elif bool(match_cap)==True:\n",
+        "          dispo = False\n",
         "     \n",
         "       word_and_dispo = (word, dispo)\n",
         "       word_dict[(row_num, word_num)] = word_and_dispo\n",
@@ -62,12 +65,12 @@
         "print(text2)\n",
         "  \n"
       ],
-      "execution_count": 46,
+      "execution_count": 72,
       "outputs": [
         {
           "output_type": "stream",
           "text": [
-            "{(0, 0): ('To', False), (0, 1): ('Sherlock1', False), (0, 2): ('Holmes', False), (0, 3): ('she*', False), (0, 4): ('is', False), (0, 5): ('always', False), (0, 6): ('the', False), (0, 7): ('woman.', False), (1, 0): ('I', False), (1, 1): ('have', False), (1, 2): ('seldom', False), (1, 3): ('heard', False), (1, 4): ('him', False), (1, 5): ('mention', False), (1, 6): ('her', False), (1, 7): ('under', False), (1, 8): ('any', False), (1, 9): ('other', False), (1, 10): ('name.', False)}\n"
+            "{(0, 0): ('To', False), (0, 1): ('Sherlock1', False), (0, 2): ('Holmes', False), (0, 3): ('she*', False), (0, 4): ('is', False), (0, 5): ('always', True), (0, 6): ('the', True), (0, 7): ('woman.', False), (1, 0): ('I', False), (1, 1): ('have', True), (1, 2): ('seldom', True), (1, 3): ('heard', True), (1, 4): ('him', True), (1, 5): ('mention', True), (1, 6): ('her', True), (1, 7): ('under', True), (1, 8): ('any', True), (1, 9): ('other', True), (1, 10): ('name.', False)}\n"
           ],
           "name": "stdout"
         }
