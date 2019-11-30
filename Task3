@@ -29,28 +29,34 @@
       "metadata": {
         "id": "FnsQ2qaMIONH",
         "colab_type": "code",
-        "colab": {
-          "base_uri": "https://localhost:8080/",
-          "height": 51
-        },
-        "outputId": "6b475873-59af-43bd-a8db-8d329be18fed"
+        "colab": {}
       },
       "source": [
-        "text1 = {1: 'To Sherlock Holmes she is always the woman.', 2:'I have seldom heard him mention her under any other name.'}\n",
-        "for row in text1:\n",
-        "  print(text1[row])\n"
+        "import re\n",
+        "text1 = ['To Sherlock1 Holmes she is always the woman.', 'I have seldom heard him mention her under any other name.']\n",
+        "\n",
+        "def rowparser(text):\n",
+        "  word_dict = {} # create an empty dictionary \n",
+        "\n",
+        "  for row_num, sentence in enumerate(text): #enumerate(text) creates a list of tuples of the form [(1, <string in row1>),(2, <string in row2>)]\n",
+        "     words_list = sentence.split()\n",
+        "     \n",
+        "  return word_dict\n",
+        "\n",
+        "\n",
+        "    # loop over words\n",
+        "    # enumerate words\n",
+        "    # apply regex\n",
+        "    # set dictionary value\n",
+        "\n",
+        "\n",
+        "\n",
+        "  # match = re.search('1', row)\n",
+        "  # print(match)\n",
+        "  \n"
       ],
-      "execution_count": 56,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "text": [
-            "To Sherlock Holmes she is always the woman.\n",
-            "I have seldom heard him mention her under any other name.\n"
-          ],
-          "name": "stdout"
-        }
-      ]
+      "execution_count": 0,
+      "outputs": []
     },
     {
       "cell_type": "markdown",
@@ -59,11 +65,20 @@
         "colab_type": "text"
       },
       "source": [
-        "**Task2 - Pars input text**:\n",
+        "**Task3 - Pars input text**:\n",
         "\n",
         "\n",
-        "1.   Use lower() and split() functions in order to insert the words into list and separate\n",
-        "2.   Input: text1 (dictionary of strings)\n",
+        "1.  Use lower() and split() functions in order to insert the words into list and separate\n",
+        "2.  Input: text1 (dictionary of strings)\n",
+        "3.  Ignore words starting with capital letters except for 1st word in sentence\n",
+        "4.  Ignore decimal\n",
+        "5.  Remove special charachters\n",
+        "6.  Output:\n",
+        "dictionary where key is Tuple (row, letter) and value is word and if is normal or ignored\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
         "\n",
         "\n",
         "\n"
