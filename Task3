@@ -48,13 +48,15 @@
         "       dispo = True\n",
         "       match_word = re.search('^[a-z]+$', word)\n",
         "       match_cap = re.match('[A-Z]', word)\n",
-        "       \n",
+        "      #  need to allow '.' at the end of word as exception\n",
+        "\n",
         "       if len(word)<=2: # can usae 'or' here for better performance\n",
         "         dispo = False\n",
         "       elif bool(match_word)==False:\n",
         "         dispo = False\n",
         "       elif bool(match_cap)==True:\n",
         "          dispo = False\n",
+        "      \n",
         "     \n",
         "       word_and_dispo = (word, dispo)\n",
         "       word_dict[(row_num, word_num)] = word_and_dispo\n",
@@ -65,7 +67,7 @@
         "print(text2)\n",
         "  \n"
       ],
-      "execution_count": 72,
+      "execution_count": 0,
       "outputs": [
         {
           "output_type": "stream",
