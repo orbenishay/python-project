@@ -32,6 +32,8 @@
       },
       "source": [
         "import re\n",
+        "text1 = ['To Sherlock1 Holmes she* is always the woman.', 'I have seldom heard him mention her under any other name.']\n",
+        "\n",
         "class SpellChecker:\n",
         "  def __init__(self, input_type=\"file\", typo_count=20, name_ignore=True):\n",
         "      self.input_type = input_type\n",
@@ -62,12 +64,41 @@
         "\n",
         "    return word_dict\n",
         "\n",
+        " \n",
+        "\n",
         "\n",
         "\n",
         "  \n"
       ],
       "execution_count": 0,
       "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Fc29_krtgEM-",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 55
+        },
+        "outputId": "e7f71410-8486-4f82-e065-aa2b53f06a18"
+      },
+      "source": [
+        "text1 = ['To Sherlock1 Holmes she* is always the woman.', 'I have seldom heard him mention her under any other name.']\n",
+        "text2=rowparser(text1)\n",
+        "print(text2)"
+      ],
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "{(0, 0): ('To', False), (0, 1): ('Sherlock1', False), (0, 2): ('Holmes', False), (0, 3): ('she*', False), (0, 4): ('is', False), (0, 5): ('always', True), (0, 6): ('the', True), (0, 7): ('woman.', False), (1, 0): ('I', False), (1, 1): ('have', True), (1, 2): ('seldom', True), (1, 3): ('heard', True), (1, 4): ('him', True), (1, 5): ('mention', True), (1, 6): ('her', True), (1, 7): ('under', True), (1, 8): ('any', True), (1, 9): ('other', True), (1, 10): ('name.', False)}\n"
+          ],
+          "name": "stdout"
+        }
+      ]
     },
     {
       "cell_type": "markdown",
@@ -103,6 +134,19 @@
         "Output: dictionary where key is Tuple (row, letter) and value is word and if is normal or ignored\n",
         "Laying out notebook..."
       ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "O-MiuzcKfDOQ",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "text1 = ['To Sherlock1 Holmes she* is always the woman.', 'I have seldom heard him mention her under any other name.']\n"
+      ],
+      "execution_count": 0,
+      "outputs": []
     },
     {
       "cell_type": "code",
